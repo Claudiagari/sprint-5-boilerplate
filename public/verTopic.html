@@ -1,23 +1,79 @@
 <!-- Mostrar en este HTML las respuestas de cada topic -->
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-    <h1>Aqui va el contenido de tema individual</h1>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    <h1>Ingresa el topic id a este html usando la url.</h1>
-    <a href='verTopic.html?topic_id=2'>Algo asi</a><br/>
-    <a href='verTopic.html?topic_id=1'>O asi</a>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    
-     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/verTopic.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Foro</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper indigo darken-4">
+      <a href="index.html" class="brand-logo black-text text-black">Foro Cool</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a href="sass.html"></a>
+        </li>
+        <li>
+          <a href="badges.html"></a>
+        </li>
+        <li>
+          <a href="collapsible.html"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="row center align">
+    <h1 id="title"></h1>
+    <h3>Por:
+      <strong id="author"></strong>
+    </h3>
+    <h5>Respuestas:</h5>
+  </div>
+  <div class="container center-align" id="responses">
+    <h5 id="no-responses"></h5>
+  </div>
+  <div class="row center-align">
+    <div class="col s12 l12">
+      <a class="waves-effect waves-light btn indigo darken-4  modal-trigger" href="#modal1">
+        <i class="material-icons left">forum</i>Crear respuesta</a>
+    </div>
+  </div>
+  </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 ">
+              <i class="material-icons prefix indigo-text text-darken-4">account_circle</i>
+              <input id="authorNewResponses" type="text" class="validate ">
+              <label for="authorNewResponses" class="indigo-text text-darken-4">Respuesta por:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 ">
+              <i class="material-icons prefix indigo-text text-darken-4">forum</i>
+              <textarea id="newResponses" class="materialize-textarea"></textarea>
+              <label for="newResponses" class="indigo-text text-darken-4">Respuesta</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="saveResponses" class="modal-action modal-close waves-effect waves-green btn-flat">Guardar</a>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/verTopic.js"></script>
+</body>
+
 </html>
