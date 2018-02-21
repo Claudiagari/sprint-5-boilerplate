@@ -45,7 +45,7 @@ $('#saveResponses').on('click', function() {
     url: 'https://private-anon-7df87ec8eb-foroapi.apiary-proxy.com/topics/' + topicId + '/responses',
   })
     .done(function(msg) {
-      $('#responses').append(`<div class="row"><div class="col offset-l2 l3"><span>${msg.content}</span> </div><div class="col offset-l2 l3"><span>${msg.author_name}</span> </div></div>`);
+      $('#responses').append(`<div class="row"><div class="col offset-l2 l3"><span><span><strong>respuesta:</strong>${' '}</span>${msg.content}</span> </div><div class="col offset-l2 l3"><span><strong>Escrito por:</strong> ${' '}</span><span>${msg.author_name}</span> </div></div>`);
     });
 });
 console.log(topicId);

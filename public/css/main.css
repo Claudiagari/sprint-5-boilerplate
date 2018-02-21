@@ -8,3 +8,7 @@ h1{
 .colour {
   background: linear-gradient(#82b1ff , #3f51b5) !important;
 }
+
+.strong {
+  font-weight: 700 !important;
+}
